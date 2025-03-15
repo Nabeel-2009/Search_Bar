@@ -1,4 +1,3 @@
-/* تنسيق الحاوية */
 .container {
     display: flex;
     flex-direction: column;
@@ -13,18 +12,24 @@
     position: relative;
     display: flex;
     align-items: center;
+    width: 90%;
+    max-width: 400px;
 }
 
 .input {
-    width: 250px;
-    padding: 10px 15px;
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 15px;
     border: 2px solid #ccc;
     border-radius: 8px;
-    font-size: 16px;
+    font-size: 1rem;
     text-align: center;
     transition: all 0.3s ease;
     background-color: #fff;
     margin-top: 10px;
+}
+*{
+    margin: 0;
 }
 
 .input:focus {
@@ -35,6 +40,16 @@
     transition: all 0.3s ease-in-out;
 }
 
-*{
-    margin: 0;
+@media (max-width: 600px) {
+    .input {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .input {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
 }
